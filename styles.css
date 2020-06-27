@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+header {
+    background-color: blue;
+}
+
+body {
+    /* background-color: black; */
+    width: 100%;
+    font-family: Nunito;
+}
+
+#input-container {
+    width: 60%;
+    top: 20vh;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 25vh;
+    border: 1px solid black;
+}
+
+#input-container input[type="text"] {
+    width: 80%;
+    height: 80%;
+    margin: 0;
+    padding: 10px;
+    border: none;
+    background: #fff;
+    outline: none;
+    font-size: 1.5em;
+}
+#input-container input[type="text"]:focus {
+    color: #333;
+}
+#input-container input[type="image"] {
+    height: 60%;
+    width: auto;
+    outline: none;
+}
+
+#input-container div{
+    height: 100%;
+    width: 15%;
+    background-color: black;
+    border-radius: 0 25vh 25vh 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#input-container img {
+    width: auto;
+    height: 50%;
+    margin-left: 20px;
+}
+
+#todo-container {
+    width: 80%;
+    margin: auto;
+}
+
+#todo-container h3{
+    font-style: bold;
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+}
+
+li {
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+}
+
+li label {
+    width: 80%;
+}
+li input[type="text"] {
+    flex-basis: 80%;
+    border: 0;
+    outline: none;
+    padding: 18px;
+}
+li input[type="image"] {
+    margin: 10px;
+    width: auto;
+    height: 1.5em;
+    outline: none;
+}
+
+li input[type="checkbox"] {
+    margin: auto;
+    margin: 10px;
+}
+
+#todo-list-container li > :nth-child(4) {
+    display: none;
+}
+
+/* Completed Task Mode */
+#completed-list-container label {
+    text-decoration: line-through;
+    color: black;
+}
+
+#completed-list-container li > :nth-child(4) {
+    display: none;
+}
+
+#completed-list-container li > :nth-child(5) {
+    display: none;
+}
+
+/* Edit Task Mode */
+#todo-list-container li.editMode label{
+    display: none;
+}
+#todo-list-container li.editMode input[type="checkbox"]{
+    display: none;
+}
+
+#todo-list-container li.editMode input[type=text]{
+    display: block;
+    border: 1px solid black;
+}
+
+#todo-list-container li.editMode > :nth-child(4) {
+    display: block;
+}
+
+#todo-list-container li.editMode > :nth-child(5) {
+    display: none;
+}
+
+#todo-list-container li.editMode > :nth-child(6) {
+    display: none;
+}
